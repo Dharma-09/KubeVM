@@ -1,0 +1,27 @@
+# PersistentVolume and a PersistentVolumeClaim for the VM’s root disk
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: linux-desktop-pv
+spec:
+  capacity:
+    storage: 10Gi  # Define the size of your storage
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: manual  # Define the storage class if required
+  hostPath:
+    path: "/mnt/data/linux-desktop"  # Path on the node where data will be stored
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: linux-desktop-pvc
+  namespace: default
+spec:
+  storageClassName: manual  # Match the storage class name if defined in PV
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi

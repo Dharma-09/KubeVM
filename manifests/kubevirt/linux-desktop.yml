@@ -1,0 +1,36 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: linux-desktop
+  namespace: default  # Change if using a different namespace
+spec:
+  running: true
+  template:
+    metadata:
+      labels:
+        kubevirt.io/domain: linux-desktop
+    spec:
+      domain:
+        cpu:
+          cores: 2
+        resources:
+          requests:
+            memory: 4Gi
+        devices:
+          disks:
+            - name: rootdisk
+              disk:
+                bus: virtio
+            - name: cloudinitdisk
+              disk:
+                bus: virtio
+      volumes:
+        - name: rootdisk
+          persistentVolumeClaim:
+            claimName: linux-desktop-pvc  # Refers to the PersistentVolumeClaim defined below
+        - name: cloudinitdisk
+          cloudInitNoCloud:
+            userData: |
+              #cloud-config
+              password: fedora
+              chpasswd: { expire: False }
