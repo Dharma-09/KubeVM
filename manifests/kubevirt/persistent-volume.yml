@@ -10,7 +10,7 @@ spec:
     - ReadWriteOnce
   storageClassName: manual  # Define the storage class if required
   hostPath:
-    path: "/mnt/data/linux-desktop"  # Path on the node where data will be stored
+    path: "/mnt/data/linux-desktop" 
 
 ---
 apiVersion: v1
@@ -19,7 +19,7 @@ metadata:
   name: linux-desktop-pvc
   namespace: default
 spec:
-  storageClassName: manual  # Match the storage class name if defined in PV
+  storageClassName: manual  
   accessModes:
     - ReadWriteOnce
   resources:
