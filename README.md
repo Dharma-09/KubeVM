@@ -12,7 +12,7 @@ Kubernetes Cluster: Required for KubeVirt.
 
 Go and Node.js: For backend and frontend.
 
-Guacamole Server: Installed and configured.
+Guacamole Server: Installed and configured..
 
 Installation Steps
 
