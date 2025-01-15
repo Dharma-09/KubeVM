@@ -19,7 +19,7 @@ Installation Steps
 Clone the Repository:
 
 ```shell
-git clone https://github.com/<your-username>/kubevm.git
+git clone https://github.com/Dharma-09/KubeVM.git
 cd kubevm
 ```
 
