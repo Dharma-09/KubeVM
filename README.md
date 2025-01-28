@@ -59,8 +59,6 @@ ELK Stack: Centralized logging and analysis.
 
 Remote Linux development environments.
 
-Training and education platforms.
-
 Scalable desktop-as-a-service (DaaS) solutions.
 
 Secure remote access for enterprise teams.
