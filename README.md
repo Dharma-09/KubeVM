@@ -46,9 +46,6 @@ npm install
 npm start
 ```
 
-Access the Application:
-
-Visit http://localhost:3000 in your browser.
 
 ## 📊 Monitoring and Logging
 
