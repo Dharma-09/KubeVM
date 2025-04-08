@@ -51,7 +51,7 @@ npm start
 
 Prometheus: Collect metrics from Kubernetes and VM workloads.
 
-Grafana: Visualize performance and user session data.
+Grafana: Visualize performance and user session meta data.
 
 ELK Stack: Centralized logging and analysis.
 
