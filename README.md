@@ -14,7 +14,7 @@ Go and Node.js: For backend and frontend.
 
 Guacamole Server: Installed and configured..
 
-Installation Steps
+Installation Guide
 
 Clone the Repository:
 
